@@ -41,6 +41,14 @@ public class Etage {
         calcAnzahlGaeste(zimmerList);
     }
 
+    public void initializeGastC(Gast gast, String room) {
+        for (Zimmer z: zimmerList) {
+            if (z.getName().equals(room)) {
+                System.out.println("R03");
+                break;
+            }
+        }
+    }
     public void calcAnzahlZimmer(ArrayList<Zimmer> zimmerList) {
         anzahlZimmer = zimmerList.size();
     }

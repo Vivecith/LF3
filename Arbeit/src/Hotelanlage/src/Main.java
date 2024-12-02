@@ -157,6 +157,8 @@ public class Main {
 
         Gast gast = new Gast("Jonas Marvin", "Meyer", adresse);
 
-        System.out.println(anlage.getGast(gast));
+        System.out.println(anlage.locGast(gast));
+
+        anlage.initializeGastA(gast, "A11");
     }
 }

@@ -59,7 +59,7 @@ public class Hotelanlage {
         calcAnzahlGaeste(gebaeudeList);
     }
 
-    public String getGast(Gast gast) {
+    public String locGast(Gast gast) {
         String text = "Der Gast "+gast.getFullName()+" ist nicht im Hotel!";
         for (Gebaeude g : gebaeudeList) {
             for (Etage e : g.getEtagenList()) {
@@ -73,6 +73,15 @@ public class Hotelanlage {
             }
         }
         return text;
+    }
+    public void initializeGastA(Gast gast, String room) {
+       String[] digits = room.split("");
+       for (Gebaeude g : gebaeudeList) {
+           if(g.getName().equals(digits[0])) {
+               g.initializeGastB(gast, room);
+               break;
+           }
+       }
     }
     public void calcAnzahlGebaeude(ArrayList<Gebaeude> gebaeudeList) {
         anzahlGebaeude = gebaeudeList.size();

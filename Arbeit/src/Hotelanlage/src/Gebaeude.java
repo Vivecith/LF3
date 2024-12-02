@@ -47,6 +47,15 @@ public class Gebaeude {
         calcAnzahlGaeste(etagenList);
     }
 
+    public void initializeGastB(Gast gast, String room) {
+        String[] digits = room.split("");
+        for (Etage e: etagenList) {
+            if (e.getName().equals(digits[0]+digits[1])) {
+                e.initializeGastC(gast, room);
+                break;
+            }
+        }
+    }
     public void calcAnzahlEtagen(ArrayList<Etage> etagenList) {
         anzahlEtagen = etagenList.size();
     }
