@@ -6,7 +6,7 @@ public class Zimmer {
 
     public Zimmer(String name) {
         this.name = name;
-        gastList = new ArrayList<Gast>();
+        gastList = new ArrayList<>();
     }
 
     public String getName() {
@@ -31,10 +31,26 @@ public class Zimmer {
     }
 
     public void addGast(Gast gast) {
-        gastList.add(gast);
+        try {
+            if (getGastList().contains(gast)) {
+                throw new GastCheckedInException(gast);
+            } else {
+                gastList.add(gast);
+            }
+        } catch (GastCheckedInException e) {
+            System.out.println(e.getMessage());
+        }
     }
     public void removeGast(Gast gast) {
-        gastList.remove(gast);
+        try {
+            if (!getGastList().contains(gast)) {
+                throw new GastNotCheckedInException(gast);
+            } else {
+                gastList.remove(gast);
+            }
+        } catch (GastNotCheckedInException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override

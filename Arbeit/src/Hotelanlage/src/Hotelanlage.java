@@ -20,6 +20,46 @@ public class Hotelanlage {
         calcAnzahlGaeste(gebaeudeList);
     }
 
+    public String getName() {
+        return name;
+    }
+    public Adresse getAdresse() {
+        return adresse;
+    }
+    public ArrayList<Gebaeude> getGebaeudeList() {
+        return gebaeudeList;
+    }
+    public int getAnzahlGebaeude() {
+        return anzahlGebaeude;
+    }
+    public int getAnzahlEtagen() {
+        return anzahlEtagen;
+    }
+    public int getAnzahlZimmer() {
+        return anzahlZimmer;
+    }
+    public int getAnzahlFZimmer() {
+        return anzahlFZimmer;
+    }
+    public int getAnzahlGaeste() {
+        return anzahlGaeste;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
+    }
+    public void setGebaeudeList(ArrayList<Gebaeude> gebaeudeList) {
+        this.gebaeudeList = gebaeudeList;
+        calcAnzahlGebaeude(gebaeudeList);
+        calcAnzahlEtagen(gebaeudeList);
+        calcAnzahlZimmer(gebaeudeList);
+        calcAnzahlFZimmer(gebaeudeList);
+        calcAnzahlGaeste(gebaeudeList);
+    }
+
     public void calcAnzahlGebaeude(ArrayList<Gebaeude> gebaeudeList) {
         anzahlGebaeude = gebaeudeList.size();
     }
@@ -42,5 +82,15 @@ public class Hotelanlage {
         for (Gebaeude gebaeude : gebaeudeList) {
             anzahlGaeste += gebaeude.getAnzahlGaeste();
         }
+    }
+
+    @Override
+    public String toString() {
+        String text = name+": "+adresse+"\n";
+        for (Gebaeude gebaeude : gebaeudeList) {
+            text += gebaeude+"\n";
+        }
+        text += "gesamt: Zimmer: " + anzahlZimmer + ", Freie Zimmer: " + anzahlFZimmer + ", Gäste: " + anzahlGaeste;
+        return text;
     }
 }
