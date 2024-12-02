@@ -47,11 +47,11 @@ public class Gebaeude {
         calcAnzahlGaeste(etagenList);
     }
 
-    public void initializeGastB(Gast gast, String room) {
+    public void initializeGastA(Gast gast, String room) {
         String[] digits = room.split("");
         for (Etage e: etagenList) {
             if (e.getName().equals(digits[0]+digits[1])) {
-                e.initializeGastC(gast, room);
+                e.initializeGastB(gast, room);
                 break;
             }
         }

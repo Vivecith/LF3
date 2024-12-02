@@ -41,10 +41,10 @@ public class Etage {
         calcAnzahlGaeste(zimmerList);
     }
 
-    public void initializeGastC(Gast gast, String room) {
+    public void initializeGastB(Gast gast, String room) {
         for (Zimmer z: zimmerList) {
             if (z.getName().equals(room)) {
-                System.out.println("R03");
+                System.out.println(z.toString());
                 break;
             }
         }

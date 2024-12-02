@@ -74,11 +74,11 @@ public class Hotelanlage {
         }
         return text;
     }
-    public void initializeGastA(Gast gast, String room) {
+    public void initializeGast(Gast gast, String room) {
        String[] digits = room.split("");
        for (Gebaeude g : gebaeudeList) {
            if(g.getName().equals(digits[0])) {
-               g.initializeGastB(gast, room);
+               g.initializeGastA(gast, room);
                break;
            }
        }

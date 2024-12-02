@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
+
+        //Initialisierung
         ArrayList<Gebaeude> ResortList = new ArrayList<>();
 
-        //Gebäude A
+            //Gebäude A
 
         ArrayList<Etage> gebaeudeAList = new ArrayList<>();
 
@@ -59,7 +61,7 @@ public class Main {
 
         ResortList.add(gebaeudeA);
 
-        //Gebäude B
+            //Gebäude B
 
         ArrayList<Etage> gebaeudeBList = new ArrayList<>();
 
@@ -100,7 +102,7 @@ public class Main {
 
         ResortList.add(gebaeudeB);
 
-        //Gebäude C
+            //Gebäude C
 
         ArrayList<Etage> gebaeudeCList = new ArrayList<>();
 
@@ -149,6 +151,7 @@ public class Main {
 
         ResortList.add(gebaeudeC);
 
+        // Test
         Adresse adresse = new Adresse("Am Howich", "6d", "20217", "Bremen");
         Hotelanlage anlage = new Hotelanlage("Am Howich-Hotel", ResortList);
         anlage.setAdresse(adresse);
@@ -159,6 +162,6 @@ public class Main {
 
         System.out.println(anlage.locGast(gast));
 
-        anlage.initializeGastA(gast, "A11");
+        anlage.initializeGast(gast, "A11");
     }
 }
