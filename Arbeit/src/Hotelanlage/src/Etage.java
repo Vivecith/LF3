@@ -45,6 +45,8 @@ public class Etage {
         for (Zimmer z: zimmerList) {
             if (z.getName().equals(room)) {
                 z.addGast(gast);
+                calcAnzahlFZimmer(this.zimmerList);
+                calcAnzahlGaeste(this.zimmerList);
                 break;
             }
         }
@@ -53,6 +55,7 @@ public class Etage {
         anzahlZimmer = zimmerList.size();
     }
     public void calcAnzahlFZimmer(ArrayList<Zimmer> zimmerList) {
+        anzahlFZimmer = 0;
         for (Zimmer zimmer : zimmerList) {
             if (zimmer.isFree()) {
                 anzahlFZimmer++;
@@ -60,6 +63,7 @@ public class Etage {
         }
     }
     public void calcAnzahlGaeste(ArrayList<Zimmer> zimmerList) {
+        anzahlGaeste = 0;
         for (Zimmer zimmer : zimmerList) {
             anzahlGaeste += zimmer.getGastAmount();
         }

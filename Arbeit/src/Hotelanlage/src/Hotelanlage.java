@@ -79,6 +79,8 @@ public class Hotelanlage {
        for (Gebaeude g : gebaeudeList) {
            if(g.getName().equals(digits[0])) {
                g.initializeGastA(gast, room);
+               calcAnzahlFZimmer(this.gebaeudeList);
+               calcAnzahlGaeste(this.gebaeudeList);
                break;
            }
        }
@@ -98,21 +100,25 @@ public class Hotelanlage {
         anzahlGebaeude = gebaeudeList.size();
     }
     public void calcAnzahlEtagen(ArrayList<Gebaeude> gebaeudeList) {
+        anzahlEtagen = 0;
         for (Gebaeude gebaeude : gebaeudeList) {
             anzahlEtagen += gebaeude.getAnzahlEtagen();
         }
     }
     public void calcAnzahlZimmer(ArrayList<Gebaeude> gebaeudeList) {
+        anzahlZimmer = 0;
         for (Gebaeude gebaeude : gebaeudeList) {
             anzahlZimmer += gebaeude.getAnzahlZimmer();
         }
     }
     public void calcAnzahlFZimmer(ArrayList<Gebaeude> gebaeudeList) {
+        anzahlFZimmer = 0;
         for (Gebaeude gebaeude : gebaeudeList) {
             anzahlFZimmer += gebaeude.getAnzahlFZimmer();
         }
     }
     public void calcAnzahlGaeste(ArrayList<Gebaeude> gebaeudeList) {
+        anzahlGaeste = 0;
         for (Gebaeude gebaeude : gebaeudeList) {
             anzahlGaeste += gebaeude.getAnzahlGaeste();
         }

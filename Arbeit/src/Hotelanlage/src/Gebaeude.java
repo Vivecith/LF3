@@ -52,6 +52,8 @@ public class Gebaeude {
         for (Etage e: etagenList) {
             if (e.getName().equals(digits[0]+digits[1])) {
                 e.initializeGastB(gast, room);
+                calcAnzahlFZimmer(this.etagenList);
+                calcAnzahlGaeste(this.etagenList);
                 break;
             }
         }
@@ -60,16 +62,19 @@ public class Gebaeude {
         anzahlEtagen = etagenList.size();
     }
     public void calcAnzahlZimmer(ArrayList<Etage> etagenList) {
+        anzahlZimmer = 0;
         for (Etage etage : etagenList) {
             anzahlZimmer += etage.getAnzahlZimmer();
         }
     }
     public void calcAnzahlFZimmer(ArrayList<Etage> etagenList) {
+        anzahlFZimmer = 0;
         for (Etage etage : etagenList) {
             anzahlFZimmer += etage.getAnzahlFZimmer();
         }
     }
     public void calcAnzahlGaeste(ArrayList<Etage> etagenList) {
+        anzahlGaeste = 0;
         for (Etage etage : etagenList) {
             anzahlGaeste += etage.getAnzahlGaeste();
         }
