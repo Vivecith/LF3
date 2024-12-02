@@ -120,7 +120,7 @@ public class Hotelanlage {
 
     @Override
     public String toString() {
-        String text = name+": "+adresse+"\n";
+        String text = "\n"+name+": "+adresse+"\n";
         for (Gebaeude gebaeude : gebaeudeList) {
             text += gebaeude+"\n";
         }

@@ -160,6 +160,8 @@ public class Main {
 
         Gast gast = new Gast("Jonas Marvin", "Meyer", adresse);
 
+        System.out.println("\n");
+
         System.out.println(anlage.locGast(gast));
 
         anlage.initializeGast(gast, "A13");
