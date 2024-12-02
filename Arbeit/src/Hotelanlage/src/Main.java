@@ -154,5 +154,9 @@ public class Main {
         anlage.setAdresse(adresse);
 
         System.out.println(anlage.toString());
+
+        Gast gast = new Gast("Jonas Marvin", "Meyer", adresse);
+
+        System.out.println(anlage.getGast(gast));
     }
 }

@@ -32,6 +32,9 @@ public class Gebaeude {
     public int getAnzahlGaeste() {
         return anzahlGaeste;
     }
+    public ArrayList<Etage> getEtagenList() {
+        return etagenList;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -65,11 +68,11 @@ public class Gebaeude {
 
     @Override
     public String toString() {
-        String text = "\nGebäude: " + name + "\n";
+        String text = "\nGebäude: " + name;
         for (Etage etage : etagenList) {
-            text += etage + "\n";
+            text += etage;
         }
-        text += "gesamt: Zimmer: " + anzahlZimmer + ", Freie Zimmer: " + anzahlFZimmer + ", Gäste: " + anzahlGaeste;
+        text += "\ngesamt: Zimmer: " + anzahlZimmer + ", Freie Zimmer: " + anzahlFZimmer + ", Gäste: " + anzahlGaeste;
         return text;
     }
 }

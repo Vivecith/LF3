@@ -44,7 +44,6 @@ public class Hotelanlage {
     public int getAnzahlGaeste() {
         return anzahlGaeste;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -60,6 +59,21 @@ public class Hotelanlage {
         calcAnzahlGaeste(gebaeudeList);
     }
 
+    public String getGast(Gast gast) {
+        String text = "Der Gast "+gast.getFullName()+" ist nicht im Hotel!";
+        for (Gebaeude g : gebaeudeList) {
+            for (Etage e : g.getEtagenList()) {
+                for (Zimmer z : e.getZimmerList()) {
+                    for (Gast ga : z.getGastList()) {
+                        if (ga == gast) {
+                            text = "Der Gast "+gast.getFullName()+" ist in Zimmer "+z.getName()+".";
+                        }
+                    }
+                }
+            }
+        }
+        return text;
+    }
     public void calcAnzahlGebaeude(ArrayList<Gebaeude> gebaeudeList) {
         anzahlGebaeude = gebaeudeList.size();
     }
@@ -90,7 +104,7 @@ public class Hotelanlage {
         for (Gebaeude gebaeude : gebaeudeList) {
             text += gebaeude+"\n";
         }
-        text += "gesamt: Zimmer: " + anzahlZimmer + ", Freie Zimmer: " + anzahlFZimmer + ", Gäste: " + anzahlGaeste;
+        text += "\ngesamt: Zimmer: " + anzahlZimmer + ", Freie Zimmer: " + anzahlFZimmer + ", Gäste: " + anzahlGaeste;
         return text;
     }
 }
