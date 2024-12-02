@@ -44,7 +44,7 @@ public class Etage {
     public void initializeGastB(Gast gast, String room) {
         for (Zimmer z: zimmerList) {
             if (z.getName().equals(room)) {
-                System.out.println(z.toString());
+                z.addGast(gast);
                 break;
             }
         }

@@ -162,6 +162,12 @@ public class Main {
 
         System.out.println(anlage.locGast(gast));
 
-        anlage.initializeGast(gast, "A11");
+        anlage.initializeGast(gast, "A13");
+
+        System.out.println(anlage.locGast(gast));
+
+        anlage.removeGast(gast);
+
+        System.out.println(anlage.locGast(gast));
     }
 }
