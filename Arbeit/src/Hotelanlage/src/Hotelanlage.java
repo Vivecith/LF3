@@ -59,14 +59,14 @@ public class Hotelanlage {
         calcAnzahlGaeste(gebaeudeList);
     }
 
-    public String locGast(Gast gast) {  //Locate Gast
-        String text = "Der Gast "+gast.getFullName()+" ist nicht im Hotel!";
+    public String locGastByID(int gastID) {  //Locate Gast
+        String text = "Der Gast #"+gastID+" ist nicht im Hotel!";
         for (Gebaeude g : gebaeudeList) {
             for (Etage e : g.getEtagenList()) {
                 for (Zimmer z : e.getZimmerList()) {
                     for (Gast ga : z.getGastList()) {
-                        if (ga == gast) {
-                            text = "Der Gast "+gast.getFullName()+" ist in Zimmer "+z.getName()+".";
+                        if (ga.getGastNr() == gastID) {
+                            text = "Der Gast "+ga.getFullName()+"[#"+ga.getGastNr()+"] ist in Zimmer "+z.getName()+".";
                         }
                     }
                 }

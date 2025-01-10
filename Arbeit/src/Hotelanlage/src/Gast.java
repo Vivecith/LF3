@@ -1,14 +1,19 @@
 public class Gast {
+    private int gastNr;
     private String vorname;
     private String nachname;
     private Adresse adresse;
 
-    public Gast(String vorname, String nachname, Adresse adresse) {
+    public Gast(int gastNr, String vorname, String nachname, Adresse adresse) {
+        this.gastNr = gastNr;
         this.vorname = vorname;
         this.nachname = nachname;
         this.adresse = adresse;
     }
 
+    public int getGastNr() {
+        return gastNr;
+    }
     public String getVorname() {
         return vorname;
     }

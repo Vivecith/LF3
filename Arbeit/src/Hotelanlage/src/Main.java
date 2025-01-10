@@ -158,16 +158,16 @@ public class Main {
 
         System.out.println(anlage.toString());
 
-        Gast gast = new Gast("Jonas Marvin", "Meyer", adresse);
-        Gast gast1 = new Gast("Dud 1", "Gast", adresse);
-        Gast gast2 = new Gast("Dud 2", "Gast", adresse);
-        Gast gast3 = new Gast("Dud 3", "Gast", adresse);
-        Gast gast4 = new Gast("Dud 4", "Gast", adresse);
+        Gast gast = new Gast(1,"Jonas Marvin", "Meyer", adresse);
+        Gast gast1 = new Gast(2, "Dud 1", "Gast", adresse);
+        Gast gast2 = new Gast(3,"Dud 2", "Gast", adresse);
+        Gast gast3 = new Gast(4,"Dud 3", "Gast", adresse);
+        Gast gast4 = new Gast(5,"Dud 4", "Gast", adresse);
 
 
         System.out.println("\n");
 
-        System.out.println(anlage.locGast(gast));
+        System.out.println(anlage.locGastByID(1));
 
         anlage.initializeGast(gast, "A13");
         anlage.initializeGast(gast1, "C31");
@@ -175,11 +175,11 @@ public class Main {
         anlage.initializeGast(gast3, "C12");
         anlage.initializeGast(gast4, "A41");
 
-        System.out.println(anlage.locGast(gast));
-        System.out.println(anlage.locGast(gast1));
-        System.out.println(anlage.locGast(gast2));
-        System.out.println(anlage.locGast(gast3));
-        System.out.println(anlage.locGast(gast4));
+        System.out.println(anlage.locGastByID(1));
+        System.out.println(anlage.locGastByID(2));
+        System.out.println(anlage.locGastByID(3));
+        System.out.println(anlage.locGastByID(4));
+        System.out.println(anlage.locGastByID(5));
 
         System.out.println(anlage.toString());
 
@@ -189,10 +189,10 @@ public class Main {
         anlage.removeGast(gast3);
         anlage.removeGast(gast4);
 
-        System.out.println(anlage.locGast(gast));
-        System.out.println(anlage.locGast(gast1));
-        System.out.println(anlage.locGast(gast2));
-        System.out.println(anlage.locGast(gast3));
-        System.out.println(anlage.locGast(gast4));
+        System.out.println(anlage.locGastByID(1));
+        System.out.println(anlage.locGastByID(2));
+        System.out.println(anlage.locGastByID(3));
+        System.out.println(anlage.locGastByID(4));
+        System.out.println(anlage.locGastByID(5));
     }
 }
