@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
 
@@ -194,5 +195,11 @@ public class Main {
         System.out.println(anlage.locGastByID(3));
         System.out.println(anlage.locGastByID(4));
         System.out.println(anlage.locGastByID(5));
+
+        HashMap<String, Gast> gastmap = new HashMap<>();
+        gastmap.put("1", gast);
+        gastmap.put("2", gast1);
+
+        System.out.println(gastmap.entrySet());
     }
 }
