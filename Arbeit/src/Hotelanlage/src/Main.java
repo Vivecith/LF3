@@ -159,7 +159,7 @@ public class Main {
         System.out.println(anlage.toString());
 
         Gast gast = new Gast(1,"Jonas Marvin", "Meyer", adresse);
-        Gast gast1 = new Gast(2, "Dud 1", "Gast", adresse);
+        Gast gast1 = new Gast(2,"Dud 1", "Gast", adresse);
         Gast gast2 = new Gast(3,"Dud 2", "Gast", adresse);
         Gast gast3 = new Gast(4,"Dud 3", "Gast", adresse);
         Gast gast4 = new Gast(5,"Dud 4", "Gast", adresse);
