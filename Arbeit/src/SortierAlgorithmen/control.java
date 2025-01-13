@@ -11,9 +11,10 @@ public class control {
             werte.add(d);
         }
 
-        Selectionsort selection = new Selectionsort();
+        Bubblesort selection = new Bubblesort();
         System.out.println(selection.sortiereASC(werte));
         System.out.println(selection.sortiereDESC(werte));
+
     }
 
 }
