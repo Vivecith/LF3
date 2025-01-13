@@ -1,17 +1,18 @@
 package SortierAlgorithmen;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class control {
     public static void main(String[] args) {
+        double[] list = {2.3, 3.5, 5.8, 2.2, 1.2, 4.5, 5.6, 3.4, 6.7, 7.8};
         ArrayList<Double> werte = new ArrayList<>();
-        werte.add(1.2);
-        werte.add(4.1);
-        werte.add(7.5);
-        werte.add(2.1);
-        werte.add(5.5);
-        werte.add(0.3);
+        for (double d : list) {
+            werte.add(d);
+        }
+
         Selectionsort selection = new Selectionsort();
+        System.out.println(selection.sortiereASC(werte));
         System.out.println(selection.sortiereDESC(werte));
     }
 
