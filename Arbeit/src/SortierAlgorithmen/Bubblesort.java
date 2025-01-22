@@ -29,7 +29,7 @@ public class Bubblesort implements ISortierbar{
         ArrayList<Double> sortiert = new ArrayList<>(werte);
         while (!werte2.isEmpty()) {
             for (int i = 0; i < werte2.size() - 1; i++) {
-                if (werte2.get(i) > werte2.get(i + 1)) {
+                if (werte2.get(i) < werte2.get(i + 1)) {
                     double x = werte2.get(i);
                     double y = werte2.get(i + 1);
                     werte2.set(i, y);

@@ -11,7 +11,7 @@ public class control {
             werte.add(d);
         }
 
-        Bubblesort selection = new Bubblesort();
+        Insertionsort selection = new Insertionsort();
         System.out.println(selection.sortiereASC(werte));
         System.out.println(selection.sortiereDESC(werte));
 
