@@ -6,6 +6,7 @@ public class Selectionsort implements ISortierbar{
         ArrayList<Double> sortiert = new ArrayList<>();
         ArrayList<Double> werte2 = new ArrayList<>(werte);
 
+        System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
 
         while (!werte2.isEmpty()) {
             double x = werte2.get(0);
@@ -14,6 +15,8 @@ public class Selectionsort implements ISortierbar{
             }
             sortiert.add(x);
             werte2.remove(x);
+
+            System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
         }
         return sortiert;
     }
@@ -23,6 +26,7 @@ public class Selectionsort implements ISortierbar{
         ArrayList<Double> sortiert = new ArrayList<>();
         ArrayList<Double> werte2 = new ArrayList<>(werte);
 
+        System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
 
         while (!werte2.isEmpty()) {
             double x = werte2.get(0);
@@ -31,6 +35,8 @@ public class Selectionsort implements ISortierbar{
             }
             sortiert.add(x);
             werte2.remove(x);
+
+            System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
         }
         return sortiert;
     }
