@@ -1,5 +1,3 @@
-package SortierAlgorithmen;
-
 import java.util.ArrayList;
 
 public class Bubblesort implements ISortierbar{
