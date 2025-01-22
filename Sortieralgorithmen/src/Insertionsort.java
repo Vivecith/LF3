@@ -6,15 +6,10 @@ public class Insertionsort implements ISortierbar{
         ArrayList<Double> werte2 = new ArrayList<>(werte);
         ArrayList<Double> sortiert = new ArrayList<>();
 
+        //System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
+
         while (!werte2.isEmpty()) {
             double maxWert = werte2.get(0);
-            int maxIndex = 0;
-            for (int i = 1; i < werte2.size(); i++) {
-                if (werte2.get(i) > maxWert) {
-                    maxWert = werte2.get(i);
-                    maxIndex = i;
-                }
-            }
 
             int insertPosition = 0;
             while (insertPosition < sortiert.size() && sortiert.get(insertPosition) < maxWert) {
@@ -22,7 +17,9 @@ public class Insertionsort implements ISortierbar{
             }
             sortiert.add(insertPosition, maxWert);
 
-            werte2.remove(maxIndex);
+            werte2.remove(0);
+
+            //System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
         }
 
         return sortiert;
@@ -35,13 +32,6 @@ public class Insertionsort implements ISortierbar{
 
         while (!werte2.isEmpty()) {
             double maxWert = werte2.get(0);
-            int maxIndex = 0;
-            for (int i = 1; i < werte2.size(); i++) {
-                if (werte2.get(i) > maxWert) {
-                    maxWert = werte2.get(i);
-                    maxIndex = i;
-                }
-            }
 
             int insertPosition = 0;
             while (insertPosition < sortiert.size() && sortiert.get(insertPosition) > maxWert) {
@@ -49,7 +39,7 @@ public class Insertionsort implements ISortierbar{
             }
             sortiert.add(insertPosition, maxWert);
 
-            werte2.remove(maxIndex);
+            werte2.remove(0);
         }
 
         return sortiert;

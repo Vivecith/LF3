@@ -57,7 +57,9 @@ public class control {
                         for (double d : list) {
                             werte.add(d);
                         }
+                        System.out.println("Aufsteigend:");
                         System.out.println(selection.sortiereASC(werte));
+                        System.out.println("Absteigend:");
                         System.out.println(selection.sortiereDESC(werte));
 
                         System.out.print("\nWollen Sie noch eine Sortierung ausführen [y/n]?: ");
