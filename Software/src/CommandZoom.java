@@ -7,11 +7,11 @@ public class CommandZoom implements ICommandUndo{
 
     @Override
     public void undo() {
-        System.out.println(IO.Colours.Templates.FALLOUTNV("Zoom zurückgesetzt!"));
+        System.out.println(IO.Colours.Templates.GREEN("Zoom zurückgesetzt!"));
     }
 
     @Override
     public void execute() {
-        System.out.println(IO.Colours.Templates.FALLOUTNV("Es wurde um "+zoom+"% gezoomt!"));
+        System.out.println(IO.Colours.Templates.GREEN("Es wurde um "+zoom+"% gezoomt!"));
     }
 }

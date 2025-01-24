@@ -6,7 +6,7 @@ public class Insertionsort implements ISortierbar{
         ArrayList<Double> werte2 = new ArrayList<>(werte);
         ArrayList<Double> sortiert = new ArrayList<>();
 
-        System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
+        System.out.println(IO.Colours.Templates.BLUE(sortiert.toString()) + "@"+ IO.Colours.Templates.RED(werte2.toString()));
 
         while (!werte2.isEmpty()) {
             double minWert = werte2.get(0);
@@ -19,7 +19,7 @@ public class Insertionsort implements ISortierbar{
 
             werte2.remove(0);
 
-            System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
+            System.out.println(IO.Colours.Templates.BLUE(sortiert.toString()) + "@"+ IO.Colours.Templates.RED(werte2.toString()));
         }
 
         return sortiert;
@@ -30,7 +30,7 @@ public class Insertionsort implements ISortierbar{
         ArrayList<Double> werte2 = new ArrayList<>(werte);
         ArrayList<Double> sortiert = new ArrayList<>();
 
-        System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
+        System.out.println(IO.Colours.Templates.BLUE(sortiert.toString()) + "@"+ IO.Colours.Templates.RED(werte2.toString()));
 
         while (!werte2.isEmpty()) {
             double maxWert = werte2.get(0);
@@ -43,7 +43,7 @@ public class Insertionsort implements ISortierbar{
 
             werte2.remove(0);
 
-            System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
+            System.out.println(IO.Colours.Templates.BLUE(sortiert.toString()) + "@"+ IO.Colours.Templates.RED(werte2.toString()));
         }
 
         return sortiert;
