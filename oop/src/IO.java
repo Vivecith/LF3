@@ -184,19 +184,34 @@ public class IO {
         public static String CYANBACK_BRIGHT = "\u001B[106m";
         public static String WHITEBACK_BRIGHT = "\u001B[107m";
 
-        //Voreinstellungen
+        //Vorgesetzte Stylings
         public static class Templates {
+            //Reguläre für schnelles Styling
+            public static String BLUE(String text) {
+                return BLUE + text + RESET;
+            }
+            public static String RED(String text) {
+                return RED + text + RESET;
+            }
+            public static String GREEN(String text) {
+                return GREEN + text + RESET;
+            }
+            public static String YELLOW(String text) {
+                return YELLOW + text + RESET;
+            }
+
+            //Spezielle Styles
             public static String FALLOUT(String text) { //Styling ähnlich dem Dialog in Fallout 1
-                return GREEN + BLACKBACK + text + RESET;
+                return GREEN_BOLD + BLACKBACK + text + RESET;
             }
             public static String FALLOUTINVERSE(String text) { //Invertierte Version von FALLOUT
-                return BLACK + GREENBACK + text + RESET;
+                return BLACK_BOLD + GREENBACK + text + RESET;
             }
             public static String FALLOUTNV(String text) { //Styling ähnlich dem Dialog in Fallout New Vegas
-                return YELLOW + BLACKBACK + text + RESET;
+                return YELLOW_BOLD + BLACKBACK + text + RESET;
             }
             public static String FALLOUTNVINVERSE(String text) { //Invertierte Version von FALLOUTNV
-                return BLACK + YELLOWBACK + text + RESET;
+                return BLACK_BOLD + YELLOWBACK + text + RESET;
             }
         }
     }
