@@ -114,7 +114,6 @@ public class IO {
     public static class Colours {
         public static String RESET = "\u001B[0m"; //Resets ALL
 
-        // REGULAR
         public static String BLACK = "\u001B[30m";
         public static String RED = "\u001B[31m";
         public static String GREEN = "\u001B[32m";
@@ -154,7 +153,7 @@ public class IO {
         public static String CYAN_LINED = "\u001B[4;36m";
         public static String WHITE_LINED = "\u001B[4;37m";
 
-        //REGULAR + HIGH BRIGHTNESS
+        //BRIGHT
         public static String BLACK_BRIGHT = "\u001B[90m";
         public static String RED_BRIGHT = "\u001B[91m";
         public static String GREEN_BRIGHT = "\u001B[92m";
@@ -163,6 +162,36 @@ public class IO {
         public static String PURPLE_BRIGHT = "\u001B[95m";
         public static String CYAN_BRIGHT = "\u001B[96m";
         public static String WHITE_BRIGHT = "\u001B[97m";
+
+        //BOLD + BRIGHT
+        public static String BLACK_BOLD_BRIGHT = "\u001B[1;90m";
+        public static String RED_BOLD_BRIGHT = "\u001B[1;91m";
+        public static String GREEN_BOLD_BRIGHT = "\u001B[1;92m";
+        public static String YELLOW_BOLD_BRIGHT = "\u001B[1;93m";
+        public static String BLUE_BOLD_BRIGHT = "\u001B[1;94m";
+        public static String PURPLE_BOLD_BRIGHT = "\u001B[1;95m";
+        public static String CYAN_BOLD_BRIGHT = "\u001B[1;96m";
+        public static String WHITE_BOLD_BRIGHT = "\u001B[1;97m";
+
+        //ITALIC + BRIGHT
+        public static String BLACK_ITALIC_BRIGHT = "\u001B[3;90m";
+        public static String RED_ITALIC_BRIGHT = "\u001B[3;91m";
+        public static String GREEN_ITALIC_BRIGHT = "\u001B[3;92m";
+        public static String YELLOW_ITALIC_BRIGHT = "\u001B[3;93m";
+        public static String BLUE_ITALIC_BRIGHT = "\u001B[3;94m";
+        public static String PURPLE_ITALIC_BRIGHT = "\u001B[3;95m";
+        public static String CYAN_ITALIC_BRIGHT = "\u001B[3;96m";
+        public static String WHITE_ITALIC_BRIGHT = "\u001B[3;97m";
+
+        //UNDERLINED + BRIGHT
+        public static String BLACK_LINED_BRIGHT = "\u001B[4;90m";
+        public static String RED_LINED_BRIGHT = "\u001B[4;91m";
+        public static String GREEN_LINED_BRIGHT = "\u001B[4;92m";
+        public static String YELLOW_LINED_BRIGHT = "\u001B[4;93m";
+        public static String BLUE_LINED_BRIGHT = "\u001B[4;94m";
+        public static String PURPLE_LINED_BRIGHT = "\u001B[4;95m";
+        public static String CYAN_LINED_BRIGHT = "\u001B[4;96m";
+        public static String WHITE_LINED_BRIGHT = "\u001B[4;97m";
 
         //BACKGROUND
         public static String BLACKBACK = "\u001B[40m";
@@ -184,9 +213,9 @@ public class IO {
         public static String CYANBACK_BRIGHT = "\u001B[106m";
         public static String WHITEBACK_BRIGHT = "\u001B[107m";
 
-        //Vorgesetzte Stylings
+        //Stylingvorlagen
         public static class Templates {
-            //Reguläre für schnelles Styling
+            //Reguläre Stylingvorlagen
             public static String BLUE(String text) {
                 return BLUE + text + RESET;
             }
@@ -200,7 +229,7 @@ public class IO {
                 return YELLOW + text + RESET;
             }
 
-            //Spezielle Styles
+            //Spezielle Stylingvorlagen
             public static String FALLOUT(String text) { //Styling ähnlich dem Dialog in Fallout 1
                 return GREEN_BOLD + BLACKBACK + text + RESET;
             }
