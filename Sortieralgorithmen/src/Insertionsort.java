@@ -6,20 +6,20 @@ public class Insertionsort implements ISortierbar{
         ArrayList<Double> werte2 = new ArrayList<>(werte);
         ArrayList<Double> sortiert = new ArrayList<>();
 
-        System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
+        System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
 
         while (!werte2.isEmpty()) {
-            double maxWert = werte2.get(0);
+            double minWert = werte2.get(0);
 
             int insertPosition = 0;
-            while (insertPosition < sortiert.size() && sortiert.get(insertPosition) < maxWert) {
+            while (insertPosition < sortiert.size() && sortiert.get(insertPosition) < minWert) {
                 insertPosition++;
             }
-            sortiert.add(insertPosition, maxWert);
+            sortiert.add(insertPosition, minWert);
 
             werte2.remove(0);
 
-            System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
+            System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
         }
 
         return sortiert;
@@ -30,7 +30,7 @@ public class Insertionsort implements ISortierbar{
         ArrayList<Double> werte2 = new ArrayList<>(werte);
         ArrayList<Double> sortiert = new ArrayList<>();
 
-        System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
+        System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
 
         while (!werte2.isEmpty()) {
             double maxWert = werte2.get(0);
@@ -43,7 +43,7 @@ public class Insertionsort implements ISortierbar{
 
             werte2.remove(0);
 
-            System.out.println("\u001B[34m" + sortiert + "\u001B[0m" + "@"+ "\u001B[31m" + werte2 + "\u001B[0m");
+            System.out.println(IO.Colours.BLUE + sortiert + IO.Colours.RESET + "@"+ IO.Colours.RED + werte2 + IO.Colours.RESET);
         }
 
         return sortiert;
