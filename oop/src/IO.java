@@ -111,107 +111,107 @@ public class IO {
         }return array;
     }
 
-    public static class Colours {
-        public static String RESET = "\u001B[0m"; //Resets ALL
+    public static final class Colours {
+        public static final String RESET = "\u001B[0m"; //Resets ALL
 
-        public static String BLACK = "\u001B[30m";
-        public static String RED = "\u001B[31m";
-        public static String GREEN = "\u001B[32m";
-        public static String YELLOW = "\u001B[33m";
-        public static String BLUE = "\u001B[34m";
-        public static String PURPLE = "\u001B[35m";
-        public static String CYAN = "\u001B[36m";
-        public static String WHITE = "\u001B[37m";
+        public static final String BLACK = "\u001B[30m";
+        public static final String RED = "\u001B[31m";
+        public static final String GREEN = "\u001B[32m";
+        public static final String YELLOW = "\u001B[33m";
+        public static final String BLUE = "\u001B[34m";
+        public static final String PURPLE = "\u001B[35m";
+        public static final String CYAN = "\u001B[36m";
+        public static final String WHITE = "\u001B[37m";
 
         //BOLD
-        public static String BLACK_BOLD = "\u001B[1;30m";
-        public static String RED_BOLD = "\u001B[1;31m";
-        public static String GREEN_BOLD = "\u001B[1;32m";
-        public static String YELLOW_BOLD = "\u001B[1;33m";
-        public static String BLUE_BOLD = "\u001B[1;34m";
-        public static String PURPLE_BOLD = "\u001B[1;35m";
-        public static String CYAN_BOLD = "\u001B[1;36m";
-        public static String WHITE_BOLD = "\u001B[1;37m";
+        public static final String BLACK_BOLD = "\u001B[1;30m";
+        public static final String RED_BOLD = "\u001B[1;31m";
+        public static final String GREEN_BOLD = "\u001B[1;32m";
+        public static final String YELLOW_BOLD = "\u001B[1;33m";
+        public static final String BLUE_BOLD = "\u001B[1;34m";
+        public static final String PURPLE_BOLD = "\u001B[1;35m";
+        public static final String CYAN_BOLD = "\u001B[1;36m";
+        public static final String WHITE_BOLD = "\u001B[1;37m";
 
         //ITALIC
-        public static String BLACK_ITALIC = "\u001B[3;30m";
-        public static String RED_ITALIC = "\u001B[3;31m";
-        public static String GREEN_ITALIC = "\u001B[3;32m";
-        public static String YELLOW_ITALIC = "\u001B[3;33m";
-        public static String BLUE_ITALIC = "\u001B[3;34m";
-        public static String PURPLE_ITALIC = "\u001B[3;35m";
-        public static String CYAN_ITALIC = "\u001B[3;36m";
-        public static String WHITE_ITALIC = "\u001B[3;37m";
+        public static final String BLACK_ITALIC = "\u001B[3;30m";
+        public static final String RED_ITALIC = "\u001B[3;31m";
+        public static final String GREEN_ITALIC = "\u001B[3;32m";
+        public static final String YELLOW_ITALIC = "\u001B[3;33m";
+        public static final String BLUE_ITALIC = "\u001B[3;34m";
+        public static final String PURPLE_ITALIC = "\u001B[3;35m";
+        public static final String CYAN_ITALIC = "\u001B[3;36m";
+        public static final String WHITE_ITALIC = "\u001B[3;37m";
 
         //UNDERLINED
-        public static String BLACK_LINED = "\u001B[4;30m";
-        public static String RED_LINED = "\u001B[4;31m";
-        public static String GREEN_LINED = "\u001B[4;32m";
-        public static String YELLOW_LINED = "\u001B[4;33m";
-        public static String BLUE_LINED = "\u001B[4;34m";
-        public static String PURPLE_LINED = "\u001B[4;35m";
-        public static String CYAN_LINED = "\u001B[4;36m";
-        public static String WHITE_LINED = "\u001B[4;37m";
+        public static final String BLACK_LINED = "\u001B[4;30m";
+        public static final String RED_LINED = "\u001B[4;31m";
+        public static final String GREEN_LINED = "\u001B[4;32m";
+        public static final String YELLOW_LINED = "\u001B[4;33m";
+        public static final String BLUE_LINED = "\u001B[4;34m";
+        public static final String PURPLE_LINED = "\u001B[4;35m";
+        public static final String CYAN_LINED = "\u001B[4;36m";
+        public static final String WHITE_LINED = "\u001B[4;37m";
 
         //BRIGHT
-        public static String BLACK_BRIGHT = "\u001B[90m";
-        public static String RED_BRIGHT = "\u001B[91m";
-        public static String GREEN_BRIGHT = "\u001B[92m";
-        public static String YELLOW_BRIGHT = "\u001B[93m";
-        public static String BLUE_BRIGHT = "\u001B[94m";
-        public static String PURPLE_BRIGHT = "\u001B[95m";
-        public static String CYAN_BRIGHT = "\u001B[96m";
-        public static String WHITE_BRIGHT = "\u001B[97m";
+        public static final String BLACK_BRIGHT = "\u001B[90m";
+        public static final String RED_BRIGHT = "\u001B[91m";
+        public static final String GREEN_BRIGHT = "\u001B[92m";
+        public static final String YELLOW_BRIGHT = "\u001B[93m";
+        public static final String BLUE_BRIGHT = "\u001B[94m";
+        public static final String PURPLE_BRIGHT = "\u001B[95m";
+        public static final String CYAN_BRIGHT = "\u001B[96m";
+        public static final String WHITE_BRIGHT = "\u001B[97m";
 
         //BOLD + BRIGHT
-        public static String BLACK_BOLD_BRIGHT = "\u001B[1;90m";
-        public static String RED_BOLD_BRIGHT = "\u001B[1;91m";
-        public static String GREEN_BOLD_BRIGHT = "\u001B[1;92m";
-        public static String YELLOW_BOLD_BRIGHT = "\u001B[1;93m";
-        public static String BLUE_BOLD_BRIGHT = "\u001B[1;94m";
-        public static String PURPLE_BOLD_BRIGHT = "\u001B[1;95m";
-        public static String CYAN_BOLD_BRIGHT = "\u001B[1;96m";
-        public static String WHITE_BOLD_BRIGHT = "\u001B[1;97m";
+        public static final String BLACK_BOLD_BRIGHT = "\u001B[1;90m";
+        public static final String RED_BOLD_BRIGHT = "\u001B[1;91m";
+        public static final String GREEN_BOLD_BRIGHT = "\u001B[1;92m";
+        public static final String YELLOW_BOLD_BRIGHT = "\u001B[1;93m";
+        public static final String BLUE_BOLD_BRIGHT = "\u001B[1;94m";
+        public static final String PURPLE_BOLD_BRIGHT = "\u001B[1;95m";
+        public static final String CYAN_BOLD_BRIGHT = "\u001B[1;96m";
+        public static final String WHITE_BOLD_BRIGHT = "\u001B[1;97m";
 
         //ITALIC + BRIGHT
-        public static String BLACK_ITALIC_BRIGHT = "\u001B[3;90m";
-        public static String RED_ITALIC_BRIGHT = "\u001B[3;91m";
-        public static String GREEN_ITALIC_BRIGHT = "\u001B[3;92m";
-        public static String YELLOW_ITALIC_BRIGHT = "\u001B[3;93m";
-        public static String BLUE_ITALIC_BRIGHT = "\u001B[3;94m";
-        public static String PURPLE_ITALIC_BRIGHT = "\u001B[3;95m";
-        public static String CYAN_ITALIC_BRIGHT = "\u001B[3;96m";
-        public static String WHITE_ITALIC_BRIGHT = "\u001B[3;97m";
+        public static final String BLACK_ITALIC_BRIGHT = "\u001B[3;90m";
+        public static final String RED_ITALIC_BRIGHT = "\u001B[3;91m";
+        public static final String GREEN_ITALIC_BRIGHT = "\u001B[3;92m";
+        public static final String YELLOW_ITALIC_BRIGHT = "\u001B[3;93m";
+        public static final String BLUE_ITALIC_BRIGHT = "\u001B[3;94m";
+        public static final String PURPLE_ITALIC_BRIGHT = "\u001B[3;95m";
+        public static final String CYAN_ITALIC_BRIGHT = "\u001B[3;96m";
+        public static final String WHITE_ITALIC_BRIGHT = "\u001B[3;97m";
 
         //UNDERLINED + BRIGHT
-        public static String BLACK_LINED_BRIGHT = "\u001B[4;90m";
-        public static String RED_LINED_BRIGHT = "\u001B[4;91m";
-        public static String GREEN_LINED_BRIGHT = "\u001B[4;92m";
-        public static String YELLOW_LINED_BRIGHT = "\u001B[4;93m";
-        public static String BLUE_LINED_BRIGHT = "\u001B[4;94m";
-        public static String PURPLE_LINED_BRIGHT = "\u001B[4;95m";
-        public static String CYAN_LINED_BRIGHT = "\u001B[4;96m";
-        public static String WHITE_LINED_BRIGHT = "\u001B[4;97m";
+        public static final String BLACK_LINED_BRIGHT = "\u001B[4;90m";
+        public static final String RED_LINED_BRIGHT = "\u001B[4;91m";
+        public static final String GREEN_LINED_BRIGHT = "\u001B[4;92m";
+        public static final String YELLOW_LINED_BRIGHT = "\u001B[4;93m";
+        public static final String BLUE_LINED_BRIGHT = "\u001B[4;94m";
+        public static final String PURPLE_LINED_BRIGHT = "\u001B[4;95m";
+        public static final String CYAN_LINED_BRIGHT = "\u001B[4;96m";
+        public static final String WHITE_LINED_BRIGHT = "\u001B[4;97m";
 
         //BACKGROUND
-        public static String BLACKBACK = "\u001B[40m";
-        public static String REDBACK = "\u001B[41m";
-        public static String GREENBACK = "\u001B[42m";
-        public static String YELLOWBACK = "\u001B[43m";
-        public static String BLUEBACK = "\u001B[44m";
-        public static String PURPLEBACK = "\u001B[45m";
-        public static String CYANBACK = "\u001B[46m";
-        public static String WHITEBACK = "\u001B[47m";
+        public static final String BLACKBACK = "\u001B[40m";
+        public static final String REDBACK = "\u001B[41m";
+        public static final String GREENBACK = "\u001B[42m";
+        public static final String YELLOWBACK = "\u001B[43m";
+        public static final String BLUEBACK = "\u001B[44m";
+        public static final String PURPLEBACK = "\u001B[45m";
+        public static final String CYANBACK = "\u001B[46m";
+        public static final String WHITEBACK = "\u001B[47m";
 
         //BACKGROUND + HIGH BRIGHTNESS
-        public static String BLACKBACK_BRIGHT = "\u001B[100m";
-        public static String REDBACK_BRIGHT = "\u001B[101m";
-        public static String GREENBACK_BRIGHT = "\u001B[102m";
-        public static String YELLOWBACK_BRIGHT = "\u001B[103m";
-        public static String BLUEBACK_BRIGHT = "\u001B[104m";
-        public static String PURPLEBACK_BRIGHT = "\u001B[105m";
-        public static String CYANBACK_BRIGHT = "\u001B[106m";
-        public static String WHITEBACK_BRIGHT = "\u001B[107m";
+        public static final String BLACKBACK_BRIGHT = "\u001B[100m";
+        public static final String REDBACK_BRIGHT = "\u001B[101m";
+        public static final String GREENBACK_BRIGHT = "\u001B[102m";
+        public static final String YELLOWBACK_BRIGHT = "\u001B[103m";
+        public static final String BLUEBACK_BRIGHT = "\u001B[104m";
+        public static final String PURPLEBACK_BRIGHT = "\u001B[105m";
+        public static final String CYANBACK_BRIGHT = "\u001B[106m";
+        public static final String WHITEBACK_BRIGHT = "\u001B[107m";
 
         //Stylingvorlagen
         public static class Templates {
