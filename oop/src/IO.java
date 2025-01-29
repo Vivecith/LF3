@@ -128,7 +128,9 @@ public class IO {
         public static final String NAVY = "\u001B[38;5;18m";
         public static final String VIOLET = "\u001B[38;5;55m";
         public static final String SCARLET = "\u001B[38;5;160m";
+
         public static final String DARKBLUE = "\u001B[38;5;20m";
+        public static final String DARKGREEN = "\u001B[38;5;22m";
 
         //BOLD
         public static final String BLACK_BOLD = "\u001B[1;30m";
@@ -146,6 +148,9 @@ public class IO {
         public static final String VIOLET_BOLD = "\u001B[1;38;5;55m";
         public static final String SCARLET_BOLD = "\u001B[1;38;5;160m";
 
+        public static final String DARKBLUE_BOLD = "\u001B[1;38;5;20m";
+        public static final String DARKGREEN_BOLD = "\u001B[1;38;5;22m";
+
         //ITALIC
         public static final String BLACK_ITALIC = "\u001B[3;30m";
         public static final String RED_ITALIC = "\u001B[3;31m";
@@ -161,6 +166,9 @@ public class IO {
         public static final String NAVY_ITALIC = "\u001B[3;38;5;18m";
         public static final String VIOLET_ITALIC = "\u001B[3;38;5;55m";
         public static final String SCARLET_ITALIC = "\u001B[3;38;5;160m";
+
+        public static final String DARKBLUE_ITALIC = "\u001B[3;38;5;20m";
+        public static final String DARKGREEN_ITALIC = "\u001B[3;38;5;22m";
 
         //UNDERLINED
         public static final String BLACK_LINED = "\u001B[4;30m";
@@ -178,6 +186,9 @@ public class IO {
         public static final String VIOLET_LINED = "\u001B[4;38;5;55m";
         public static final String SCARLET_LINED = "\u001B[4;38;5;160m";
 
+        public static final String DARKBLUE_LINED = "\u001B[4;38;5;20m";
+        public static final String DARKGREEN_LINED = "\u001B[4;38;5;22m";
+
         //BRIGHT
         public static final String BLACK_BRIGHT = "\u001B[90m";
         public static final String RED_BRIGHT = "\u001B[91m";
@@ -193,6 +204,9 @@ public class IO {
         public static final String NAVY_BRIGHT = "\u001B[38;5;19m";
         public static final String VIOLET_BRIGHT = "\u001B[38;5;56m";
         public static final String SCARLET_BRIGHT = "\u001B[38;5;196m";
+
+        public static final String DARKBLUE_BRIGHT = "\u001B[38;5;21m";
+        public static final String DARKGREEN_BRIGHT = "\u001B[38;5;28m";
 
         //BOLD + BRIGHT
         public static final String BLACK_BOLD_BRIGHT = "\u001B[1;90m";
@@ -210,6 +224,9 @@ public class IO {
         public static final String VIOLET_BOLD_BRIGHT = "\u001B[1;38;5;56m";
         public static final String SCARLET_BOLD_BRIGHT = "\u001B[1;38;5;196m";
 
+        public static final String DARKBLUE_BOLD_BRIGHT = "\u001B[1;38;5;21m";
+        public static final String DARKGREEN_BOLD_BRIGHT = "\u001B[1;38;5;28m";
+
         //ITALIC + BRIGHT
         public static final String BLACK_ITALIC_BRIGHT = "\u001B[3;90m";
         public static final String RED_ITALIC_BRIGHT = "\u001B[3;91m";
@@ -225,6 +242,9 @@ public class IO {
         public static final String NAVY_ITALIC_BRIGHT = "\u001B[3;38;5;19m";
         public static final String VIOLET_ITALIC_BRIGHT = "\u001B[3;38;5;56m";
         public static final String SCARLET_ITALIC_BRIGHT = "\u001B[3;38;5;196m";
+
+        public static final String DARKBLUE_ITALIC_BRIGHT = "\u001B[3;38;5;21m";
+        public static final String DARKGREEN_ITALIC_BRIGHT = "\u001B[3;38;5;28m";
 
         //UNDERLINED + BRIGHT
         public static final String BLACK_LINED_BRIGHT = "\u001B[4;90m";
@@ -242,6 +262,9 @@ public class IO {
         public static final String VIOLET_LINED_BRIGHT = "\u001B[4;38;5;56m";
         public static final String SCARLET_LINED_BRIGHT = "\u001B[4;38;5;196m";
 
+        public static final String DARKBLUE_LINED_BRIGHT = "\u001B[4;38;5;21m";
+        public static final String DARKGREEN_LINED_BRIGHT = "\u001B[4;38;5;28m";
+
         //BACKGROUND
         public static final String BLACKBACK = "\u001B[40m";
         public static final String REDBACK = "\u001B[41m";
@@ -257,6 +280,9 @@ public class IO {
         public static final String NAVYBACK = "\u001B[48;5;18m";
         public static final String VIOLETBACK = "\u001B[48;5;55m";
         public static final String SCARLETBACK = "\u001B[48;5;160m";
+
+        public static final String DARKBLUEBACK = "\u001B[48;5;20m";
+        public static final String DARKGREENBACK = "\u001B[48;5;22m";
 
         //BACKGROUND + HIGH BRIGHTNESS
         public static final String BLACKBACK_BRIGHT = "\u001B[100m";
@@ -274,8 +300,14 @@ public class IO {
         public static final String VIOLETBACK_BRIGHT = "\u001B[48;5;56m";
         public static final String SCARLETBACK_BRIGHT = "\u001B[48;5;196m";
 
+        public static final String DARKBLUEBACK_BRIGHT = "\u001B[48;5;21m";
+        public static final String DARKGREENBACK_BRIGHT = "\u001B[48;5;28m";
+
         public static String CUSTOM_FONT(int value) {
             return "\u001B[38;5;" + value + "m";
+        }
+        public static String CUSTOM_FONT(int value, int format) {
+            return "\u001B[" + format + ";38;5;" + value + "m";
         }
         public static String CUSTOM_BACK(int value) {
             return "\u001B[48;5;" + value + "m";
@@ -299,10 +331,10 @@ public class IO {
 
             //Spezielle Stylingvorlagen
             public static String FALLOUT(String text) { //Styling ähnlich dem Dialog in Fallout 1
-                return GREEN_BOLD + BLACKBACK + text + RESET;
+                return DARKGREEN_BOLD + BLACKBACK + text + RESET;
             }
             public static String FALLOUTINVERSE(String text) { //Invertierte Version von FALLOUT
-                return BLACK_BOLD + GREENBACK + text + RESET;
+                return BLACK_BOLD + DARKGREENBACK + text + RESET;
             }
             public static String FALLOUTNV(String text) { //Styling ähnlich dem Dialog in Fallout New Vegas
                 return YELLOW_BOLD + BLACKBACK + text + RESET;
@@ -311,11 +343,11 @@ public class IO {
                 return BLACK_BOLD + YELLOWBACK + text + RESET;
             }
             public static String POLKADOT(String text) {
-                return RED_BRIGHT + YELLOWBACK + text + RESET;
+                return SCARLET_BRIGHT + YELLOWBACK_BRIGHT + text + RESET;
             }
             public static String RAINBOW(String text) {
                 StringBuilder text2 = new StringBuilder();
-                String[] colours = {SCARLETBACK, ORANGEBACK, YELLOWBACK_BRIGHT, GREENBACK_BRIGHT, CYANBACK, NAVYBACK_BRIGHT, VIOLETBACK};
+                String[] colours = {SCARLETBACK, ORANGEBACK_BRIGHT, YELLOWBACK_BRIGHT, GREENBACK_BRIGHT, CYANBACK, DARKBLUEBACK_BRIGHT, VIOLETBACK};
                 for (int i = 0; i < text.length(); i++) {
                     text2.append(colours[i % colours.length]).append(text.charAt(i));
                 }
