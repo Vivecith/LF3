@@ -5,6 +5,6 @@ public class TestIO {
     public static void main(String[] args) throws IOException {
         System.out.println(IO.Colours.Templates.FALLOUTNV("HALLO WELT!"));
         String text = IO.readString();
-        System.out.println(IO.Colours.Templates.FALLOUTNVINVERSE(text));
+        System.out.println(IO.Colours.Templates.FALLOUTNV(text));
     }
 }
