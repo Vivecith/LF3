@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class IO {
 
@@ -114,6 +115,15 @@ public class IO {
     public static final class Colours {
         public static final String RESET = "\u001B[0m"; //Resets ALL
 
+        /*public static String BLACK(boolean bright, int... styles) {
+            StringBuilder ansi = new StringBuilder("\u001B[30m");
+            if (styles != null) {
+                for (int i = 1; i < styles.length; i++) {
+                return ansi.replace("[", "["+ styles[i] +";");
+                }
+            }
+            return ansi;
+        }*/
         public static final String BLACK = "\u001B[30m";
         public static final String RED = "\u001B[31m";
         public static final String GREEN = "\u001B[32m";
