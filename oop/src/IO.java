@@ -115,15 +115,20 @@ public class IO {
     public static final class Colours {
         public static final String RESET = "\u001B[0m"; //Resets ALL
 
-        /*public static String BLACK(boolean bright, int... styles) {
-            StringBuilder ansi = new StringBuilder("\u001B[30m");
+        public static String BLACK(boolean bright, int... styles) {
+            String ansi;
+            if (!bright) {
+                ansi = "\u001B[30m";
+            } else {
+                ansi = "\u001B[90m";
+            }
             if (styles != null) {
-                for (int i = 1; i < styles.length; i++) {
-                return ansi.replace("[", "["+ styles[i] +";");
+                for (int style : styles) {
+                    ansi = ansi.replace("[", "["+ style +";");
                 }
             }
             return ansi;
-        }*/
+        }
         public static final String BLACK = "\u001B[30m";
         public static final String RED = "\u001B[31m";
         public static final String GREEN = "\u001B[32m";
